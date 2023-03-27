@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&family=Mouse+Memoirs&display=swap'); 
+
+:root{
+    --backgroundcolor:white;
+    --primarycolordark:#5A4683;
+    --primarycolortone:#D7CDE9;
+    font-family: 'Mogra', cursive;
+    font-family: 'Mouse Memoirs', sans-serif; 
+    
+}
+
+.Heading{
+    font-size:40px;
+}
+
+.dataname{
+    display:inline;
+}
+.Title{
+    font-size:30px;
+    margin:10px -20px 10px 0px;
+}
+input[type='radio']{
+    transform:scale(1.4);
+    margin:0px 20px 10px 0px ;
+}
+
+li{
+    font-size:40px;
+}
+#payradio{
+    margin:5px 0px 0px 10px;
+
+}
+.rowalign{
+    display:flex;
+    flex-direction:row;
+    
+}

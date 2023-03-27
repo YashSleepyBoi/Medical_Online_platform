@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/style.css"> 
+    <link rel="stylesheet" type="text/css" href="/personal.css">
+
+</head>
+<body>
+    <form method='POST' action="/table/<%= data[0]._id  %>">
+        <div class="rowalign">
+        <h2>Payment Status  </h2>
+        <input type="radio" name="payment" id="payradio">
+        </div>
+        <ul>
+            <h3 class="Title" >Room Number</h3>
+            <li><input type="radio" name="radio" value="r1">Room 1</li>
+            <li><input type="radio" name="radio" value="r2">Room 2</li>
+            <li><input type="radio" name="radio" value="r3">Room 3</li>
+        </ul>
+        <input type="submit" class="actionbutton" name="Submit" value="Submit" onclick="sendEmail()">
+    </form>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "yash137yadav@gmail.com",
+                Password : "BE31909F5385E01C100F716D1C6A1F3E6567",
+                To : 'yash137yadav@gmail.com',
+                From : "yash137yadav@gmail.com",
+                Subject : "The Doctor will see you now ",
+                Body : "<a href='http://localhost:3000/home'>Redicrect to token</a>"
+            }).then(
+            message => alert(message)
+            );}
+    </script>
+</body>
+</html>

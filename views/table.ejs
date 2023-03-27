@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Mogra&family=Mouse+Memoirs&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="AdminView.css">
+    <script src="/AdminView.js" defer></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="TitleText">
+    
+            <div class="Titletext2">AdminView</div>
+    
+        </div>   
+    </div>
+        <table id="customers" class="table">
+    
+    
+            <tr class="record">
+                
+                  <th>Name</th>
+                  <th>NRIC</th>
+                  <th>Gmail</th>
+                  <th>Room</th>
+                  <th>Check In</th>
+                  <th>Token</th>
+                  <th>Payment</th>
+             
+                  
+                </tr>
+        
+    <% for(let i in data){%>
+       
+            <tr>
+                
+                <th><a href="/table/<%= data[i]._id  %>" class="up"> <%= data[i].name  %> </a></th>
+                <th><%= data[i].nric  %></th>
+                <th><%= data[i].email  %></th>
+                <th><%= data[i].room  %></th>
+                <th><%= data[i].checkin  %></th>
+                <th><%= data[i].token  %> </th>
+                <% if(data[i].payment===true){%>
+                    <th>Done</th>
+
+                <%} else{%> 
+                    <th>Incomplete</th>
+                <% } %> 
+
+                
+                
+            </tr>
+       
+        
+        
+        
+    <%} %> 
+</body>
+</html>
